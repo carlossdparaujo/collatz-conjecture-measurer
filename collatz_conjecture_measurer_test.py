@@ -36,6 +36,11 @@ class CollatzConjectureMeasurerTest(unittest.TestCase):
         measurer = CollatzConjectureMeasurer()
         n = measurer.get_longest_sequence_number_between(1, 4)
         self.assertIs(n == 3, True, "Number with longest sequence was: " + str(n))
+
+    def test_get_number_with_longest_iteration_sequence_between_1_and_28_should_return_27(self):
+        measurer = CollatzConjectureMeasurer()
+        n = measurer.get_longest_sequence_number_between(1, 28)
+        self.assertIs(n == 27, True, "Number with longest sequence was: " + str(n))
         
 if __name__ == '__main__':
     unittest.main()
